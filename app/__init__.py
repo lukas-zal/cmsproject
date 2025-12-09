@@ -17,7 +17,7 @@ def create_app():
     login_manager.login_view = 'login'
 
     # 👇 IMPORT *AFTER* db.init_app(app)
-    from .models import User
+    from .models import User, Client, Consultant, Project, ProjectTask
 
     @login_manager.user_loader
     def load_user(user_id):
