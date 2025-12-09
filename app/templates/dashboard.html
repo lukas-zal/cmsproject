@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Clients</h1>
+<table border="1" cellpadding="5">
+<tr>
+    <th>Name</th><th>Email</th><th>Phone</th><th>Company Size</th><th>Industry</th><th>Consultant</th>
+</tr>
+{% for client in clients %}
+<tr>
+    <td>{{ client.name }}</td>
+    <td>{{ client.contact_email }}</td>
+    <td>{{ client.phone }}</td>
+    <td>{{ client.company_size }}</td>
+    <td>{{ client.industry }}</td>
+    <td>{{ client.assigned_consultant }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
